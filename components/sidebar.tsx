@@ -53,20 +53,20 @@ const NavLinks = [
 
 const Sidebar = () => {
   return (
-    <section className="font-poppins w-[215px] h-screen py-4 px-8">
+    <section className="font-poppins w-[210px] h-screen py-4 px-8">
       <div className="flex items-center gap-4">
-        <div className="p-2 bg-blue w-fit h-fit rounded">
+        <div className="p-[5px] bg-blue w-fit h-fit rounded">
           <FaLaptopCode className="size-4 text-white" />
         </div>
         <p className="font-[500] text-sm text-neutral-800">Dabang</p>
       </div>
-      <div className="flex flex-col gap-3 mt-4">
+      <div className="flex flex-col gap-2 mt-6">
         {NavLinks?.map((link, index) => (
           <div
             key={link.id}
-            className={`text-[0.70rem] cursor-pointer tracking-tight flex items-center gap-4 pl-3 py-[7px] ${
+            className={`text-[0.70rem] cursor-pointer tracking-tight flex items-center gap-4 pl-3 py-[8px] ${
               index === 0
-                ? "text-white bg-blue rounded-lg "
+                ? "text-white bg-blue rounded-lg mb-1 shadow-blue-800"
                 : "text-zinc-500 hover:bg-blue-200"
             }`}
           >
@@ -76,14 +76,14 @@ const Sidebar = () => {
         ))}
       </div>
 
-      <div className="bg-blue font-poppins flex flex-col items-center justify-between  mt-6 rounded-lg py-4 w-full h-[140px]">
+      <div className="bg-blue px-[2px] font-poppins flex flex-col items-center justify-between  mt-14 rounded-lg py-4 w-full h-[140px]">
         <div className="p-1 bg-white text-blue w-fit h-fit rounded">
           <FaLaptopCode className="size-4 text-blue" />
         </div>
         <div className="text-center px-2">
           <p className="text-white text-[0.76rem] font-[550]">Dabang Pro</p>
           <p className="text-[0.52rem] text-light text-center text-white">
-            Lorem ipsum <br /> sit  sit consectetur 
+            Lorem ipsum <br /> sit sit consectetur
           </p>
         </div>
         <button className="text-[0.70rem] mt-1 rounded py-1 ronded px-5 bg-white text-blue">
