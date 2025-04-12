@@ -81,7 +81,7 @@ const Sidebar = () => {
           <FaLaptopCode className="size-4 text-blue" />
         </div>
         <div className="text-center px-2">
-          <p className="text-white text-[0.76rem]">Dabang Pro</p>
+          <p className="text-white text-[0.76rem] font-[550]">Dabang Pro</p>
           <p className="text-[0.52rem] text-light text-center text-white">
             Lorem ipsum <br /> sit  sit consectetur 
           </p>
