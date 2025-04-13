@@ -5,7 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <section className="font-poppins px-8 gap-4 flex items-center justify-between h-14 bg-white w-full">
+    <section className="font-poppins px-6 gap-4 flex items-center justify-between h-[50px] bg-white w-full">
       <p className="text-neutral-800 font-[550]">Dashboard</p>
       <div className="flex items-center gap-4">
         <div className="relative text-[0.82rem] overflow-hidden max-w-sm border-[1px] rounded">
@@ -16,6 +16,7 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center gap-2 mx-4 whitespace-nowrap">
+          < div className="bg-zinc-700 h-4 w-4 rounded-lg"></div>
           <p className="text-[0.82rem] text-neutral-800">Eng (US)</p>
           <FaAngleDown className="size-3 text-zinc-500" />
         </div>
@@ -25,7 +26,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <div className="bg-zinc-700 h-9 w-9 rounded-lg"></div>
           <div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-6">
               <p className="text-[0.82rem]">Masfiq</p>
               <FaAngleDown className="size-3" />
             </div>
