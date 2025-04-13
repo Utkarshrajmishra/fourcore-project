@@ -24,7 +24,7 @@ const SaleCard = ({
       </div>
       <p className="mt-1 font-medium">{amount}</p>
       <p className="text-xs mt-1">{title}</p>
-      <p className="text-xs text-blue-600">{desc}</p>
+      <p className="text-[0.65rem] whitespace-nowrap text-blue-600 pr-2">{desc}</p>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section className="font-poppins px-4 md:px-6 flex items-center justify-between h-[55px] bg-white w-full relative z-10">
+    <section className=" px-4 md:px-6 flex items-center justify-between h-[55px] bg-white w-full relative z-10">
       <div className="flex items-center justify-between w-full md:w-auto">
         <div className="flex items-center gap-2">
           <button
@@ -28,7 +28,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden md:flex font-poppins items-center gap-4">
         <div className="relative text-xs overflow-hidden max-w-sm border rounded">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4" />
           <Input
@@ -54,7 +54,6 @@ const Header = () => {
               width={36}
               height={46}
               className="rounded-lg object-fit"
-              
             />
           </div>
           <div>
@@ -68,7 +67,7 @@ const Header = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <div className="fixed inset-0  z-50 md:hidden">
           <div
             className="absolute inset-0 bg-black/30"
             onClick={() => setMobileMenuOpen(false)}
@@ -113,7 +112,7 @@ const Header = () => {
               </div>
 
               <div className="mt-4">
-                <p className="text-sm font-medium text-neutral-800 mb-2">
+                <p className="text-sm font-poppins font-medium text-neutral-800 mb-2">
                   Menu
                 </p>
                 <div className="flex flex-col">
@@ -133,7 +132,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-600 rounded-lg p-4 mt-6 text-center">
+              <div className="bg-blue-600 font-poppins rounded-lg p-4 mt-6 text-center">
                 <div className="flex justify-center mb-2">
                   <div className="p-1 bg-white rounded-md">
                     <FaLaptopCode className="size-4 text-blue-600" />
