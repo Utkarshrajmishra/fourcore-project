@@ -41,7 +41,7 @@ export function Target() {
   return (
     <section className="h-fit w-full p-2 rounded-lg border border-gray-200 bg-white">
       <p className="text-sm font-medium text-blue-950">Target vs Reality</p>
-      <ChartContainer config={chartConfig} className="w-full h-32">
+      <ChartContainer config={chartConfig} className="w-full h-30">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             accessibilityLayer

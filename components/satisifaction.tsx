@@ -37,7 +37,7 @@ export function Satification() {
   return (
     <section className="h-fit w-full rounded-xl border border-gray-200 p-2 bg-white">
       <p className="text-sm font-medium">Customer Satification</p>
-      <ChartContainer config={chartConfig} className="h-40 w-full">
+      <ChartContainer config={chartConfig} className="h-41 w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             accessibilityLayer
