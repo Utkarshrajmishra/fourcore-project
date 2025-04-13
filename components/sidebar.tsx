@@ -67,7 +67,7 @@ const Sidebar = () => {
             className={`text-[0.70rem] cursor-pointer tracking-tight flex items-center gap-4 pl-3 py-[8px] ${
               index === 0
                 ? "text-white bg-blue rounded-lg mb-1 shadow-blue-800"
-                : "text-zinc-500 hover:bg-blue-200"
+                : "text-zinc-500 hover:bg-blue-50  rounded-lg "
             }`}
           >
             {link.icon}
