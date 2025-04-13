@@ -1,6 +1,4 @@
 "use client";
-
-import { TrendingUp } from "lucide-react";
 import {
   Area,
   AreaChart,
@@ -8,15 +6,6 @@ import {
   ResponsiveContainer,
   XAxis,
 } from "recharts";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -25,6 +14,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+
 const chartData = [
   { month: "January", lastmonth: 186, thismonth: 80 },
   { month: "February", lastmonth: 305, thismonth: 200 },
@@ -47,7 +37,7 @@ const chartConfig = {
 
 export function Satification() {
   return (
-    <section className="h-fit w-[320px] rounded-xl border-1 p-2 bg-white">
+    <section className="h-fit w-full rounded-xl border border-gray-200 p-2 bg-white">
       <p className="text-sm font-medium">Customer Satification</p>
       <ChartContainer config={chartConfig} className="h-40 w-full">
         <ResponsiveContainer width="100%" height="100%">

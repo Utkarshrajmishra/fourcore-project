@@ -7,14 +7,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   ChartConfig,
   ChartContainer,
   ChartLegend,
@@ -73,7 +65,7 @@ const customerData = [
 
 const chartConfig = {
   royalCustomers: {
-    label: "Royal Customers",
+    label: "Loyal Customers",
     color: "hsl(var(--chart-1))",
   },
   uniqueCustomers: {
@@ -88,13 +80,13 @@ const chartConfig = {
 
 export function Visitors() {
   return (
-    <section className="h-fit w-[450px] border-1 rounded-xl p-4 bg-white">
-      <p className="text-sm">h</p>
-      <ChartContainer config={chartConfig} className="h-32 w-full">
+    <section className="h-fit w-full border border-gray-200 rounded-xl p-4 bg-white">
+      <p className="text-sm font-medium text-blue-950">Visitors Insights</p>
+      <ChartContainer config={chartConfig} className="h-36 mt-4 w-full">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={customerData}
-            margin={{ left: 8, right: 8, top: 0, bottom: 4 }} 
+            margin={{ left: 8, right: 8, top: 0, bottom: 4 }}
           >
             <CartesianGrid vertical={false} />
             <XAxis
@@ -104,6 +96,7 @@ export function Visitors() {
               tickMargin={6}
               style={{ fontSize: 10 }}
               tickFormatter={(value) => value.slice(0, 3)}
+              tick={{ fontSize: 8 }}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Line
@@ -127,6 +120,7 @@ export function Visitors() {
               strokeWidth={2}
               dot={false}
             />
+            <ChartLegend content={<ChartLegendContent />} />
           </LineChart>
         </ResponsiveContainer>
       </ChartContainer>

@@ -22,8 +22,8 @@ const chartData = [
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
-  { month: "June", desktop: 214, mobile: 140 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "July", desktop: 214, mobile: 140 },
+  { month: "August", desktop: 214, mobile: 140 },
 ];
 
 const chartConfig = {
@@ -39,9 +39,9 @@ const chartConfig = {
 
 export function Target() {
   return (
-    <section className="h-fit w-[320px] p-2 rounded-lg border-1 bg-white">
+    <section className="h-fit w-full p-2 rounded-lg border border-gray-200 bg-white">
       <p className="text-sm font-medium text-blue-950">Target vs Reality</p>
-      <ChartContainer config={chartConfig} className="w-full h-30">
+      <ChartContainer config={chartConfig} className="w-full h-32">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             accessibilityLayer
@@ -57,6 +57,7 @@ export function Target() {
               tickMargin={6}
               style={{ fontSize: 10 }}
               tickFormatter={(value) => value.slice(0, 3)}
+              tick={{ fontSize: 8 }}
             />
             <ChartTooltip
               cursor={false}
@@ -67,29 +68,23 @@ export function Target() {
           </BarChart>
         </ResponsiveContainer>
       </ChartContainer>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 mt-2">
         <div className="flex items-center gap-3">
-          <div className=" h-[18px] bg-green-200 w-5 flex items-center justify-center">
+          <div className="h-[18px] bg-green-200 w-5 flex items-center justify-center">
             <HiOutlineShoppingBag className="size-3 text-green-800" />
           </div>
-          <div className="flex gap-6">
-            {" "}
-            <p className="text-[0.7rem] text-blue-950 font-medium">
-              Reality Sales
-            </p>
-            <p className="text-[0.7rem] text-green-800">8.823</p>
+          <div className="flex justify-between w-full">
+            <p className="text-xs text-blue-950 font-medium">Reality Sales</p>
+            <p className="text-xs text-green-800">8.823</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className=" h-[18px] bg-yellow-200 w-5 flex items-center justify-center">
+          <div className="h-[18px] bg-yellow-200 w-5 flex items-center justify-center">
             <Ticket className="size-3 text-yellow-800" />
           </div>
-          <div className="flex gap-6">
-            {" "}
-            <p className="text-[0.7rem] text-blue-950 font-medium">
-              Target Sales
-            </p>
-            <p className="text-[0.7rem] text-yellow-800">12.123</p>
+          <div className="flex justify-between w-full">
+            <p className="text-xs text-blue-950 font-medium">Target Sales</p>
+            <p className="text-xs text-yellow-800">12.123</p>
           </div>
         </div>
       </div>

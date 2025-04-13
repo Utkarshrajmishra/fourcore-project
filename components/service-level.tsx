@@ -1,6 +1,5 @@
 "use client";
-import { Bar, BarChart, ResponsiveContainer} from "recharts";
-
+import { Bar, BarChart, ResponsiveContainer } from "recharts";
 import {
   ChartConfig,
   ChartContainer,
@@ -15,7 +14,6 @@ const chartData = [
   { date: "2024-07-18", volume: 140, service: 550 },
   { date: "2024-07-19", volume: 600, service: 350 },
   { date: "2024-07-20", volume: 480, service: 400 },
-
 ];
 
 const chartConfig = {
@@ -31,9 +29,9 @@ const chartConfig = {
 
 export default function ServiceLevel() {
   return (
-    <section className="h-fit w-[320px] border rounded-lg p-2     bg-white">
+    <section className="h-fit w-full border border-gray-200 rounded-lg p-2 bg-white">
       <p className="text-sm font-medium">Total Sales</p>
-      <ChartContainer config={chartConfig} className="w-full  mt-[-6px] h-32 pl-0">
+      <ChartContainer config={chartConfig} className="w-full mt-0 h-36 pl-0">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             accessibilityLayer
@@ -64,13 +62,13 @@ export default function ServiceLevel() {
       <div className="flex gap-4 mt-2 justify-center">
         <div className="flex items-center gap-1">
           <div className="h-2 w-2 bg-[#0494ff]"></div>
-          <div className="text-[0.76rem]">
-            <p>Volumne</p>
+          <div className="text-xs">
+            <p>Volume</p>
           </div>
         </div>
         <div className="flex items-center gap-1">
           <div className="h-2 w-2 bg-[#00e097]"></div>
-          <div className="text-[0.76rem]">
+          <div className="text-xs">
             <p>Service</p>
           </div>
         </div>

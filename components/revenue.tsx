@@ -1,5 +1,4 @@
 "use client";
-import { TrendingUp } from "lucide-react";
 import {
   Bar,
   BarChart,
@@ -9,18 +8,8 @@ import {
   YAxis,
 } from "recharts";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
@@ -48,9 +37,9 @@ const chartConfig = {
 
 export default function Revenue() {
   return (
-    <section className="h-fit w-[410px] p-2 rounded-lg border-1 bg-white">
+    <section className="h-fit w-full p-2 rounded-lg border border-gray-200 bg-white">
       <p className="text-sm font-medium text-blue-950">Total Revenue</p>
-      <ChartContainer config={chartConfig} className="w-full mt-2 h-37 pl-0">
+      <ChartContainer config={chartConfig} className="w-full mt-2 h-36 pl-0">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             accessibilityLayer
@@ -66,6 +55,8 @@ export default function Revenue() {
               tickMargin={6}
               style={{ fontSize: 10 }}
               strokeWidth={1}
+              tick={{ fontSize: 8, width: 20 }}
+              tickFormatter={(value) => value.slice(0, 3)}
             />
             <YAxis
               dataKey="desktop"
@@ -73,6 +64,7 @@ export default function Revenue() {
               axisLine={false}
               style={{ fontSize: 10 }}
               strokeWidth={1}
+              tick={{ fontSize: 8 }}
             />
             <ChartTooltip
               cursor={false}

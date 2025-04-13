@@ -8,7 +8,7 @@ import { CiSettings } from "react-icons/ci";
 import { PiSignOutFill } from "react-icons/pi";
 import { FaLaptopCode } from "react-icons/fa6";
 
-const NavLinks = [
+export const NavLinks = [
   {
     id: 1,
     title: "Dashboard",
@@ -53,12 +53,12 @@ const NavLinks = [
 
 const Sidebar = () => {
   return (
-    <section className="font-poppins w-[250px] h-screen py-4 px-10">
+    <section className="hidden w-[250px] h-screen py-4 px-10">
       <div className="flex items-center gap-4">
         <div className="p-[5px] bg-blue w-fit h-fit rounded">
           <FaLaptopCode className="size-4 text-white" />
         </div>
-        <p className="font-[500] text-sm text-neutral-800">Dabang</p>
+        <p className="font-[500]  text-neutral-800">Dabang</p>
       </div>
       <div className="flex flex-col gap-2 mt-6">
         {NavLinks?.map((link, index) => (
