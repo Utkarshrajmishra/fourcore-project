@@ -47,7 +47,7 @@ export function DailySales() {
     <div className="w-full p-4 bg-white border border-gray-200 rounded-xl h-fit">
       <div className="flex  justify-between sm:items-end">
         <div>
-          <p className="text-sm font-medium">Today's Sale</p>
+          <p className="text-sm font-medium">Today&apos;s Sale</p>{" "}
           <p className="text-xs mt-1 text-zinc-500">Sales Summary</p>
         </div>
         <button className="bg-white flex gap-2 items-center text-xs rounded py-1 px-3 text-blue-950 border border-blue-950 mt-2 sm:mt-0">
