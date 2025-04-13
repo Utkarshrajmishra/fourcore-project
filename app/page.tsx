@@ -3,10 +3,11 @@ import Revenue from "@/components/revenue";
 import { Satification } from "@/components/satisifaction";
 import { Target } from "@/components/target";
 import { Visitors } from "@/components/visitor";
+import { Prediction } from "@/components/prediction-table";
 
 export default function Home() {
   return (
-    <section className="w-full p-4 h-screen bg-[#f9fafc]">
+    <section className="w-full p-2 h-[calc(100vh-50px)] bg-[#f9fafc]">
       <div className="flex justify-between">
         <DailySales />
         <Visitors />
@@ -17,7 +18,7 @@ export default function Home() {
         <Target />
       </div>
       <div className="mt-2">
-        <Visitors />
+        <Prediction/>
       </div>
     </section>
   );
