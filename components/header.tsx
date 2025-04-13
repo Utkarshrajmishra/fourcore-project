@@ -5,7 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <section className="font-poppins px-6 gap-4 flex items-center justify-between h-[50px] bg-white w-full">
+    <section className="font-poppins px-6 gap-4 flex items-center justify-between h-[55px] bg-white w-full">
       <p className="text-neutral-800 font-[550]">Dashboard</p>
       <div className="flex items-center gap-4">
         <div className="relative text-[0.82rem] overflow-hidden max-w-sm border-[1px] rounded">

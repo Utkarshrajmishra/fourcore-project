@@ -48,15 +48,15 @@ const chartConfig = {
 
 export default function Revenue() {
   return (
-    <section className="h-fit w-full max-w-md border rounded-lg p-4 bg-white">
-      <p className="text-sm font-medium">Total Sales</p>
-      <ChartContainer config={chartConfig} className="w-full mt-2 h-36 pl-0">
+    <section className="h-fit w-[410px] p-2 rounded-lg border-1 bg-white">
+      <p className="text-sm font-medium text-blue-950">Total Revenue</p>
+      <ChartContainer config={chartConfig} className="w-full mt-2 h-37 pl-0">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             accessibilityLayer
             data={chartData}
-            margin={{ top: 12, right: 0, bottom: 0, left: -32 }}
-            barGap={0}
+            margin={{ top: 10, right: 0, bottom: 0, left: -32 }}
+            barGap={1}
           >
             <CartesianGrid vertical={false} />
             <XAxis
@@ -83,7 +83,6 @@ export default function Revenue() {
           </BarChart>
         </ResponsiveContainer>
       </ChartContainer>
-      <p className="text-[0.7rem] mt-[-10px]">hh</p>
-          </section>
+    </section>
   );
 }

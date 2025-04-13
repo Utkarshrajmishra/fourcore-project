@@ -41,9 +41,9 @@ const chartConfig = {
 
 export function Satification() {
   return (
-    <section className="h-fit w-[320px] rounded-xl border-1 py-2 bg-white">
-      <p className="text-sm ml-2 font-medium">Customer Satification</p>
-      <ChartContainer config={chartConfig} className="h-36 w-full">
+    <section className="h-fit w-[320px] rounded-xl border-1 p-2 bg-white">
+      <p className="text-sm font-medium">Customer Satification</p>
+      <ChartContainer config={chartConfig} className="h-40 w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             accessibilityLayer

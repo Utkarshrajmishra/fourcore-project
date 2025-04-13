@@ -88,59 +88,48 @@ const chartConfig = {
 
 export function Visitors() {
   return (
-    <Card className="shadow-none w-[34%] p-2">
-      <CardHeader className="pb-1">
-        {" "}
-        {/* Reduce bottom padding */}
-        <CardTitle className="text-sm font-poppins font-medium">
-          Visitors Insights
-        </CardTitle>
-      </CardHeader>
-
-      <CardContent className="h-28 p-0">
-        {" "}
-        {/* Remove extra padding */}
-        <ChartContainer config={chartConfig} className="h-full w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              data={customerData}
-              margin={{ left: 8, right: 8, top: 4, bottom: 4 }} // Smaller margins
-            >
-              <CartesianGrid vertical={false} />
-              <XAxis
-                dataKey="month"
-                tickLine={false}
-                axisLine={true}
-                tickMargin={6}
-                style={{ fontSize: 10 }}
-                tickFormatter={(value) => value.slice(0, 3)}
-              />
-              <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-              <Line
-                dataKey="royalCustomers"
-                type="monotone"
-                stroke="#ad1bfe"
-                strokeWidth={2}
-                dot={false}
-              />
-              <Line
-                dataKey="newCustomers"
-                type="monotone"
-                stroke="#5ade71"
-                strokeWidth={2}
-                dot={false}
-              />
-              <Line
-                dataKey="uniqueCustomers"
-                type="monotone"
-                stroke="#ef4949"
-                strokeWidth={2}
-                dot={false}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+    <section className="h-fit w-[450px] border-1 rounded-xl p-4 bg-white">
+      <p className="text-sm">h</p>
+      <ChartContainer config={chartConfig} className="h-32 w-full">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart
+            data={customerData}
+            margin={{ left: 8, right: 8, top: 0, bottom: 4 }} 
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="month"
+              tickLine={false}
+              axisLine={true}
+              tickMargin={6}
+              style={{ fontSize: 10 }}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+            <Line
+              dataKey="royalCustomers"
+              type="monotone"
+              stroke="#ad1bfe"
+              strokeWidth={1}
+              dot={false}
+            />
+            <Line
+              dataKey="newCustomers"
+              type="monotone"
+              stroke="#5ade71"
+              strokeWidth={1}
+              dot={false}
+            />
+            <Line
+              dataKey="uniqueCustomers"
+              type="monotone"
+              stroke="#ef4949"
+              strokeWidth={1}
+              dot={false}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </ChartContainer>
+    </section>
   );
 }
