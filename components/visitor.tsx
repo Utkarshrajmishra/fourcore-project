@@ -100,7 +100,7 @@ export function Visitors() {
             <XAxis
               dataKey="month"
               tickLine={false}
-              axisLine={true}
+              axisLine={false}
               tickMargin={6}
               style={{ fontSize: 10 }}
               tickFormatter={(value) => value.slice(0, 3)}
@@ -110,21 +110,21 @@ export function Visitors() {
               dataKey="royalCustomers"
               type="monotone"
               stroke="#ad1bfe"
-              strokeWidth={1}
+              strokeWidth={2}
               dot={false}
             />
             <Line
               dataKey="newCustomers"
               type="monotone"
               stroke="#5ade71"
-              strokeWidth={1}
+              strokeWidth={2}
               dot={false}
             />
             <Line
               dataKey="uniqueCustomers"
               type="monotone"
               stroke="#ef4949"
-              strokeWidth={1}
+              strokeWidth={2}
               dot={false}
             />
           </LineChart>

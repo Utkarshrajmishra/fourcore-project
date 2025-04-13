@@ -1,7 +1,13 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, XAxis } from "recharts";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  XAxis,
+} from "recharts";
 
 import {
   Card,
@@ -20,21 +26,21 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "January", lastmonth: 186, thismonth: 80 },
+  { month: "February", lastmonth: 305, thismonth: 200 },
+  { month: "March", lastmonth: 237, thismonth: 120 },
+  { month: "April", lastmonth: 73, thismonth: 190 },
+  { month: "May", lastmonth: 209, thismonth: 130 },
+  { month: "June", lastmonth: 214, thismonth: 140 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  lastmonth: {
+    label: "Last Month",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  thismonth: {
+    label: "This Month",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
@@ -58,23 +64,33 @@ export function Satification() {
               cursor={false}
               content={<ChartTooltipContent indicator="line" />}
             />
+            <defs>
+              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#4dd5a7" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#93c5fd" stopOpacity={0.2} />
+              </linearGradient>
+              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#60a5fa" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#2563eb" stopOpacity={0.1} />
+              </linearGradient>
+            </defs>
             <Area
-              dataKey="mobile"
+              dataKey="lastmonth"
               type="natural"
-              fill="#60a5fa"
+              fill="url(#fillMobile)"
               fillOpacity={0.4}
-              stroke="#60a5fa"
+              stroke="#3b82f6"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="thismonth"
               type="natural"
-              fill="#60a5fa"
+              fill="url(#fillDesktop)"
               fillOpacity={0.4}
-              stroke="#60a5fa"
+              stroke="#047857"
               stackId="a"
             />
-            <ChartLegend content={<ChartLegendContent />} className="mt-1" />
+            <ChartLegend content={<ChartLegendContent />} />
           </AreaChart>
         </ResponsiveContainer>
       </ChartContainer>

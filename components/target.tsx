@@ -72,24 +72,24 @@ export function Target() {
           <div className=" h-[18px] bg-green-200 w-5 flex items-center justify-center">
             <HiOutlineShoppingBag className="size-3 text-green-800" />
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-6">
             {" "}
-            <p className="text-[0.8rem] text-blue-950 font-medium">
+            <p className="text-[0.7rem] text-blue-950 font-medium">
               Reality Sales
             </p>
-            <p className="text-[0.8rem] text-green-800">8.823</p>
+            <p className="text-[0.7rem] text-green-800">8.823</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
           <div className=" h-[18px] bg-yellow-200 w-5 flex items-center justify-center">
             <Ticket className="size-3 text-yellow-800" />
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-6">
             {" "}
-            <p className="text-[0.8rem] text-blue-950 font-medium">
+            <p className="text-[0.7rem] text-blue-950 font-medium">
               Target Sales
             </p>
-            <p className="text-[0.8rem] text-yellow-800">12.123</p>
+            <p className="text-[0.7rem] text-yellow-800">12.123</p>
           </div>
         </div>
       </div>
