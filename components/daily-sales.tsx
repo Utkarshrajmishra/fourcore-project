@@ -45,7 +45,7 @@ const SalesData = [
 export function DailySales() {
   return (
     <div className="w-full p-4 bg-white border border-gray-200 rounded-xl h-fit">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end">
+      <div className="flex  justify-between sm:items-end">
         <div>
           <p className="text-sm font-medium">Today's Sale</p>
           <p className="text-xs mt-1 text-zinc-500">Sales Summary</p>
