@@ -11,12 +11,12 @@ type ProgressBarProps={
 }
 
 export function ProgressBar({color, backgroundColor, totalProgress}:ProgressBarProps) {
-  const [progress, setProgress] = React.useState(13)
+  const [progress, setProgress] = React.useState(0)
 
   React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500)
+    const timer = setTimeout(() => setProgress(totalProgress), 500)
     return () => clearTimeout(timer)
   }, [])
 
-  return <Progress value={progress} className="w-[60%]" />
+  return <Progress value={progress} className={`w-[100%] h-1 ${color} ${backgroundColor}`} />
 }

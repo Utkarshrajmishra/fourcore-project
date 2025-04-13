@@ -1,55 +1,74 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { ProgressBar } from "./progressbar";
 
-const invoices = [
+const popularProducts = [
   {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "$250.00",
-    paymentMethod: "Credit Card",
+    id: "P001",
+    name: "Wireless Earbuds",
+    percentage: 85,
+    color: "[&>*]:bg-orange-500",
+    bgColor: "bg-orange-100",
+    textcolor: "text-orange-500",
   },
   {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
+    id: "P002",
+    name: "Smartwatch",
+    percentage: 78,
+    color: "[&>*]:bg-purple-500",
+    bgColor: "bg-purple-100",
+    textcolor: "text-purple-500",
   },
   {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
+    id: "P003",
+    name: "Bluetooth Speaker",
+    percentage: 65,
+    color: "[&>*]:bg-emerald-500",
+    bgColor: "bg-emerald-100",
+    textcolor: "text-emerald-500",
   },
-
 ];
 
 export function Prediction() {
   return (
     <div className="w-[410px]  rounded-lg   bg-white border-1 p-2">
-        <p className="text-sm font-medium">Top Product</p>
+      <p className="text-sm font-medium text-blue-950">Top Product</p>
       <Table>
         <TableHeader>
-          <TableRow className="text-[0.7rem]">
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+          <TableRow className="text-[0.74rem] font-normal">
+            <TableHead className="text-zinc-500">#</TableHead>
+            <TableHead className="text-zinc-500">Name</TableHead>
+            <TableHead className="w-[300px] text-zinc-500">
+              Popularity
+            </TableHead>
+            <TableHead className="text-zinc-500">Sales</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="text-[0.6rem]">
-          {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">
-                {invoice.totalAmount}
+        <TableBody className="text-[0.7rem]">
+          {popularProducts.map((invoice, index) => (
+            <TableRow key={invoice.id}>
+              <TableCell className="text-zinc-600">{index + 1}</TableCell>
+              <TableCell className="text-zinc-600">{invoice.name}</TableCell>
+              <TableCell>
+                {
+                  <ProgressBar
+                    color={invoice.color}
+                    backgroundColor={invoice.bgColor}
+                    totalProgress={invoice.percentage}
+                  />
+                }
+              </TableCell>
+
+              <TableCell
+                className={`text-right text-neutral-600 ${invoice.textcolor}`}
+              >
+                <p className={`py-[2px] px-2 ${invoice.bgColor} flex items-center justify-center`}> {invoice.percentage}%</p>
               </TableCell>
             </TableRow>
           ))}
