@@ -53,7 +53,7 @@ export const NavLinks = [
 
 const Sidebar = () => {
   return (
-    <section className="hidden w-[250px] h-screen py-4 px-10">
+    <section className="lg:inline-block hidden w-[250px] h-screen py-4 px-10">
       <div className="flex items-center gap-4">
         <div className="p-[5px] bg-blue w-fit h-fit rounded">
           <FaLaptopCode className="size-4 text-white" />

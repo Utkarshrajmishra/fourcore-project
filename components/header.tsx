@@ -5,6 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useState } from "react";
 import { NavLinks } from "./sidebar";
 import { FaLaptopCode } from "react-icons/fa6";
+import Image from "next/image";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,7 +37,9 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center gap-2 mx-4 whitespace-nowrap">
-          <div className="bg-zinc-700 h-4 w-4 rounded-lg"></div>
+          <div className="bg-zinc-700 h-4 w-4 rounded-lg">
+            <Image alt="Eng" src="/usa.png" width={16} height={16} />
+          </div>
           <p className="text-xs text-neutral-800">Eng (US)</p>
           <FaAngleDown className="size-3 text-zinc-500" />
         </div>
@@ -44,7 +47,16 @@ const Header = () => {
           <Bell className="text-orange-400 h-[14px] w-[14px]" />
         </div>
         <div className="flex items-center gap-2">
-          <div className="bg-zinc-700 h-9 w-9 rounded-lg"></div>
+          <div className="bg-zinc-700 h-9 w-9 rounded-lg">
+            <Image
+              alt="User"
+              src="/user.jpeg"
+              width={36}
+              height={46}
+              className="rounded-lg object-fit"
+              
+            />
+          </div>
           <div>
             <div className="flex items-center gap-6">
               <p className="text-xs">Masfiq</p>
